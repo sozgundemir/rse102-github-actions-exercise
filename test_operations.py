@@ -22,7 +22,7 @@ def test_find_max():
     actual_max = find_max(data)
 
     # Test
-    assert actual_max == pytest.approx(expected_max)
+    assert actual_max == pytest.approx(expected_max, abs=0.01)
 
 
 # Unit test
@@ -41,7 +41,7 @@ def test_find_mean():
     actual_mean = find_mean(data)
 
     # Test
-    assert actual_mean == pytest.approx(expected_mean)
+    assert actual_mean == pytest.approx(expected_mean, abs=0.01)
 
 
 # Integration test
@@ -63,7 +63,7 @@ def test_mean_of_max():
     actual_mean_of_max = find_mean([maximum1, maximum2])
 
     # Test
-    assert actual_mean_of_max == pytest.approx(expected_mean_of_max)
+    assert actual_mean_of_max == pytest.approx(expected_mean_of_max, abs=0.01)
 
 
 # Regression test
