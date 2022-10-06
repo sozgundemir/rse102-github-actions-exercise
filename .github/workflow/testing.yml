@@ -1,14 +1,16 @@
 name: Testing workflow
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
-  test:
+  style_check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
         with:
           python-version: '3.8.10'
-      - name: "Run unittests"
-        run: python -m unittest test_operations_unittests.py
+      - name: "Install style checker"
+        run: pip install black
+      - name: "Run style check"
+        run: black --check .
