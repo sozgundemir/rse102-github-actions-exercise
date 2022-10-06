@@ -1,4 +1,4 @@
-![RSE102CI/CD](https://github.com/sozgundemir/rse102-github-actions-exercise/actions/workflows/testing.yml/badge.svg)
+!["RSE 102 CI/CD"](https://github.com/sozgundemir/rse102-github-actions-exercise/actions/workflows/testing.yml/badge.svg)
 
 
 # Demo code for automation lecture 
