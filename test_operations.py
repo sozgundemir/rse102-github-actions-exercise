@@ -63,7 +63,7 @@ def test_mean_of_max():
     actual_mean_of_max = find_mean([maximum1, maximum2])
 
     # Test
-    assert actual_mean_of_max == expected_mean_of_max
+    assert actual_mean_of_max == pytest.approx(expected_mean_of_max)
 
 
 # Regression test
