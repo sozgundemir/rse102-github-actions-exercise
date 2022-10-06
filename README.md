@@ -1,3 +1,5 @@
+![example branch parameter](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?branch=automation)
+
 # Demo code for automation lecture 
 
 This repository contains the code from the lecture "Testing a Python Code" with minimal modifications. In this repository we want to add some automation (CI) using GitHub Actions.
