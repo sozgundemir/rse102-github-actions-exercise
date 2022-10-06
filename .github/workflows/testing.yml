@@ -41,6 +41,8 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: coverage
+      - name: "Install coverage"
+        run: pip install -U coverage
       - name: "Create coverage report"
         run: coverage report
       - name: "Convert to xml file"
