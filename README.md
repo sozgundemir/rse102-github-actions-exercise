@@ -1,4 +1,6 @@
-![example branch parameter](https://github.com/sozgundemir/rse102-github-actions-exercise.git/actions/workflows/testing.yml/badge.svg?branch=automation)
+![Workflow](https://github.com/sozgundemir/rse102-github-actions-exercise.git/actions/workflows/testing.yml/badge.svg)
+
+
 
 # Demo code for automation lecture 
 
