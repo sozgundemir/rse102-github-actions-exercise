@@ -1,4 +1,4 @@
-name: RSE102CI/CD
+name: "RSE 102 CI/CD"
 
 on: [push]
 
