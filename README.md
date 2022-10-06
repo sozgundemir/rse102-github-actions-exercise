@@ -1,4 +1,4 @@
-![Workflow](https://github.com/sozgundemir/rse102-github-actions-exercise/actions/workflows/testing.yml/badge.svg)
+![Deneme Workflow](https://github.com/sozgundemir/rse102-github-actions-exercise/actions/workflows/testing.yml/badge.svg)
 
 
 
