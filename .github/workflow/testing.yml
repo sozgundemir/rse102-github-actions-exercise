@@ -1,19 +1,8 @@
 name: Testing workflow
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
-  style_check:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v2
-        with:
-          python-version: '3.8.10'
-      - name: "Install style checker"
-        run: pip install black
-      - name: "Run style check"
-        run: black --check
   test:
     runs-on: ubuntu-latest
     steps:
@@ -21,30 +10,5 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: '3.8.10'
-      - name: "Install coverage"
-        run: pip install -U coverage
-      - name: "Run pytest with coverage"
-        run: coverage run -m pytest
-      - name: "Upload .coverage as artifact"
-        uses: actions/upload-artifact@v2
-        with:
-          name: coverage
-          path: .coverage
-          retention-days: 1
-  coverage_report:
-    runs-on: ubuntu-latest
-    steps:
-      - name: "Download .coverage artifact"
-        uses: actions/download-artifact@v2
-        with:
-          name: coverage
-      - name: "Create coverage report"
-        run: coverage report
-      - name: "Convert to xml file"
-        run: coverage xml
-      - name: "Upload coverage.xml as artifact"
-        uses: actions/upload-artifact@v2
-        with:
-          name: coverage_xml
-          path: coverage.xml
-          retention-days: 14
+      - name: "Run unittests"
+        run: python -m unittest test_operations_unittests.py
